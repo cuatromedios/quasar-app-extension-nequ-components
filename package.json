@@ -1,5 +1,5 @@
 {
-  "name": "quasar-app-extension-nequ",
+  "name": "quasar-app-extension-nequ-components",
   "version": "0.0.1",
   "description": "Quasar Extension for NeQu boilerplate",
   "author": "Ramses <ramses@cuatromedios.com>",
@@ -10,9 +10,9 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/cuatromedios/quasar-app-ext-ension-nequ"
+    "url": "https://github.com/cuatromedios/quasar-app-extension-nequ-components"
   },
-  "bugs": "https://github.com/cuatromedios/quasar-app-ext-ension-nequ/issues",
+  "bugs": "https://github.com/cuatromedios/quasar-app-extension-nequ-components/issues",
   "homepage": "http://nequ.github.io/",
   "engines": {
     "node": ">= 8.9.0",
