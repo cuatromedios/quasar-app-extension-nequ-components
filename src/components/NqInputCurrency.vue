@@ -1,9 +1,9 @@
 <template>
-  <nq-input class="nq-currency" input-class="text-right text-h6">
+  <nq-input-number class="nq-currency" input-class="text-right text-h6">
     <template v-slot:prepend>
       {{ symbol }}
     </template>
-  </nq-input>
+  </nq-input-number>
 </template>
 
 <script>
