@@ -1,7 +1,11 @@
 <template>
-  <nq-input-number class="nq-currency" input-class="text-right text-h6">
-    <template v-slot:prepend>
-      {{ symbol }}
+  <nq-input-number v-bind="$attrs"
+                   v-on="$listeners"
+                   :pattern="pattern"
+                   :prefix="`${symbol} `"
+                   class="nq-input-currency">
+    <template v-slot:append>
+      {{ currency }}
     </template>
   </nq-input-number>
 </template>
@@ -13,6 +17,15 @@
       symbol: {
         default: '$',
         type: String
+      },
+      currency: {
+        default: '',
+        type: String
+      }
+    },
+    data () {
+      return {
+        pattern: '0,0.00'
       }
     }
   }
