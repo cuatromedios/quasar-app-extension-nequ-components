@@ -12,7 +12,6 @@ export const field = {
   methods: {
     async onFocus() {
       this.focused = true
-      console.log('focus')
     },
     async onBlur(endpoint, payload, form) {
       this.focused = false

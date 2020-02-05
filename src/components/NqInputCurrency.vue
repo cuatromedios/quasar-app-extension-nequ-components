@@ -2,7 +2,7 @@
   <nq-input-number v-bind="$attrs"
                    v-on="$listeners"
                    :pattern="pattern"
-                   :prefix="`${symbol} `"
+                   :before="`${symbol} `"
                    class="nq-input-currency">
     <template v-slot:append>
       {{ currency }}

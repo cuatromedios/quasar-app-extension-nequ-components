@@ -28,7 +28,7 @@
         required: false,
         default: '0,0.00'
       },
-      prefix: {
+      before: {
         type: String,
         required: false,
         default: ''
@@ -53,7 +53,7 @@
         this.$emit('input', this.value)
       },
       format (value) {
-        return this.prefix + numeral(value).format(this.pattern)
+        return this.before + numeral(value).format(this.pattern)
       }
     },
     watch: {
