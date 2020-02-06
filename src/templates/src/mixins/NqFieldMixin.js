@@ -1,7 +1,7 @@
 /**
  * Base mixin for field components.
  */
-export const field = {
+export const nqFieldMixin = {
   data () {
     return {
       focused: false

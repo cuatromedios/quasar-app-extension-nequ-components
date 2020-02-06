@@ -11,11 +11,11 @@
 </template>
 
 <script>
-  import {field} from '../mixins/field'
+  import {nqFieldMixin} from '../templates/src/mixins/NqFieldMixin'
 
   export default {
     name: 'NqField',
-    mixins: [ field ],
+    mixins: [ nqFieldMixin ],
     props: {
       filled:Boolean,
       standout:Boolean,

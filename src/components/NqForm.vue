@@ -6,7 +6,7 @@
     <div v-if="ready" class="row q-col-gutter-lg">
       <slot name="default"></slot>
       <div class="flex flex-center col-12">
-        <q-btn label="Cancel" size="md" color="primary" flat class="q-mr-lg" @click="onCancel" />
+        <q-btn v-if="cancelLabel !== ''" :label="cancelLabel" size="md" color="primary" flat class="q-mr-lg" @click="onCancel" />
         <q-btn :label="submitLabel" size="lg" push type="submit" color="primary" :loading="saving"/>
       </div>
     </div>
@@ -20,15 +20,16 @@
 </template>
 
 <script>
-  import {field} from '../mixins/field'
-
   export default {
     name: 'NqForm',
-    mixins: [ field ],
     props: {
       submitLabel: {
         type: String,
         default: 'Submit'
+      },
+      cancelLabel: {
+        type: String,
+        default: 'Cancel'
       },
       ready: {
         type: Boolean,

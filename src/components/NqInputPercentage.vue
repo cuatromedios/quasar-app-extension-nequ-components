@@ -12,10 +12,10 @@
 
 <script>
   import numeral from 'numeral'
-  import {field} from '../mixins/field'
+  import {nqFieldMixin} from '../templates/src/mixins/NqFieldMixin'
   export default {
     name: 'NqInputPercentage',
-    mixins: [ field ],
+    mixins: [ nqFieldMixin ],
     props: {
       value: {
         type: [String, Number],
