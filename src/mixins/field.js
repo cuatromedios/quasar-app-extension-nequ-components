@@ -7,13 +7,13 @@ export const field = {
       focused: false
     }
   },
-  async mounted () {
+  mounted () {
   },
   methods: {
-    async onFocus() {
+    onFocus() {
       this.focused = true
     },
-    async onBlur(endpoint, payload, form) {
+    onBlur(endpoint, payload, form) {
       this.focused = false
     }
   }
