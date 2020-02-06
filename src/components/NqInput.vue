@@ -32,6 +32,6 @@
   .nq-input-field {
     font-size: 1.33em;
     font-family: 'Fira Mono', monospace, Monospaced;
-    letter-spacing: -0.05em;
+    letter-spacing: -0.025em;
   }
 </style>

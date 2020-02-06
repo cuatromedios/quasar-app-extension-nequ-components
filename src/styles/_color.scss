@@ -1,0 +1,22 @@
+body {
+  background-color: $bg-color;
+  color: $text-color;
+}
+.nq-input {
+  .q-field__control {
+    background-color: lighten($bg-color, 3.5);
+  }
+  &.q-field--standard {
+    .q-field__control {
+      background-color: transparent;
+    }
+  }
+  &.q-field--focused {
+    .q-field__control {
+      background-color: lighten($bg-color, 5);
+    }
+    .q-field__native {
+      color: darken($primary, 33);
+    }
+  }
+}
