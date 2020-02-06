@@ -2,7 +2,7 @@ body {
   background-color: $bg-color;
   color: $text-color;
 }
-.nq-input {
+.nq-component {
   .q-field__control {
     background-color: lighten($bg-color, 3.5);
   }

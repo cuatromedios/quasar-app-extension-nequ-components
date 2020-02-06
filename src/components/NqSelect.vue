@@ -1,21 +1,19 @@
 <template>
-  <q-input v-bind="$attrs"
-           v-on="$listeners"
-           v-on:focus="onFocus"
-           v-on:blur="onBlur"
-           :outlined="!filled && !standout && !borderless"
-           class="nq-input nq-component"
-           :input-class="`${$attrs['input-class'] || ''} nq-input-field`"
+  <q-select v-bind="$attrs"
+            v-on="$listeners"
+            :outlined="!filled && !standout && !borderless"
+            class="nq-select nq-component"
+            :input-class="`${$attrs['input-class'] || ''} nq-select-field`"
            >
     <template v-for="(_, slot) of $scopedSlots" v-slot:[slot]="scope"><slot :name="slot" v-bind="scope"/></template>
-  </q-input>
+  </q-select>
 </template>
 
 <script>
   import {field} from '../mixins/field'
 
   export default {
-    name: 'NqInput',
+    name: 'NqSelect',
     mixins: [ field ],
     props: {
       filled:Boolean,
