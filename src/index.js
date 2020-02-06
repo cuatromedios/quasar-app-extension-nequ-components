@@ -14,7 +14,9 @@ function extendConf (conf) {
   conf.build.transpileDependencies.push(/quasar-app-extension-nequ-components[\\/]src/)
 
   // make sure my-ext css goes through webpack to avoid ssr issues
-  conf.css.push('~quasar-app-extension-nequ-components/src/components/nequ.scss')
+  conf.css.push('~quasar-app-extension-nequ-components/src/styles/nequ.scss')
+
+  conf.extras.push('fontawesome-v5')
 }
 
 module.exports = function (api) {

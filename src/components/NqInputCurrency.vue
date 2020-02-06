@@ -30,3 +30,10 @@
     }
   }
 </script>
+
+<style lang="scss">
+  .nq-input-currency .q-field__append {
+    color: $grey-6;
+    font-size: $body-font-size * 1.25;
+  }
+</style>

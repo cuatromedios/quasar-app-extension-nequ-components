@@ -5,7 +5,7 @@
            v-on:blur="onBlur"
            :outlined="!filled && !standout && !borderless"
            class="nq-input"
-           :input-class="`${$attrs['input-class'] || ''} text-h6`"
+           :input-class="`${$attrs['input-class'] || ''} nq-input-field`"
            >
     <template v-for="(_, slot) of $scopedSlots" v-slot:[slot]="scope"><slot :name="slot" v-bind="scope"/></template>
   </q-input>
@@ -27,3 +27,11 @@
     }
   }
 </script>
+
+<style lang="scss">
+  .nq-input-field {
+    font-size: 1.33em;
+    font-family: 'Fira Mono', monospace, Monospaced;
+    letter-spacing: -0.05em;
+  }
+</style>

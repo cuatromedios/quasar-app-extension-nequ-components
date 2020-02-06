@@ -63,3 +63,10 @@
     }
   }
 </script>
+<style lang="scss">
+  .nq-input-percentage .q-field__append {
+    color: $grey-7;
+    font-size: $body-font-size * 1.5;
+    line-height: 100%;
+  }
+</style>
