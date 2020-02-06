@@ -2,21 +2,4 @@ body {
   background-color: $bg-color;
   color: $text-color;
 }
-.nq-component {
-  .q-field__control {
-    background-color: lighten($bg-color, 4);
-  }
-  &.q-field--standard {
-    .q-field__control {
-      background-color: transparent;
-    }
-  }
-  &.q-field--focused {
-    .q-field__control {
-      background-color: lighten($bg-color, 10);
-    }
-    .q-field__native {
-      color: darken($primary, 33);
-    }
-  }
-}
+

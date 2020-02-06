@@ -1,0 +1,23 @@
+.nq-input-field, .nq-select {
+  font-size: 1.33em;
+  font-family: 'Fira Mono', monospace, Monospaced;
+  letter-spacing: -0.025em;
+}
+.nq-component {
+  .q-field__control {
+    background-color: lighten($bg-color, 4);
+  }
+  &.q-field--standard {
+    .q-field__control {
+      background-color: transparent;
+    }
+  }
+  &.q-field--focused {
+    .q-field__control {
+      background-color: lighten($bg-color, 10);
+    }
+    .q-field__native {
+      color: darken($primary, 33);
+    }
+  }
+}
