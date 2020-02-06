@@ -27,11 +27,3 @@
     }
   }
 </script>
-
-<style lang="scss">
-  .nq-input-field {
-    font-size: 1.33em;
-    font-family: 'Fira Mono', monospace, Monospaced;
-    letter-spacing: -0.025em;
-  }
-</style>

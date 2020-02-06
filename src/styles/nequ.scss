@@ -1,5 +1,5 @@
-$bg-color: #f4f3f0;
-$text-color: #484240;
+$bg-color: lighten(desaturate($primary, 66%), 50%);
+$text-color: darken(desaturate($primary, 75%), 25%);
 
 @import "fonts";
 @import "typography";
