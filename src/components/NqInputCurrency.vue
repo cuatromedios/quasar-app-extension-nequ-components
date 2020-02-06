@@ -4,7 +4,7 @@
                    :pattern="pattern"
                    :before="`${symbol} `"
                    class="nq-input-currency">
-    <template v-slot:append>
+    <template v-slot:append v-if="currency">
       {{ currency }}
     </template>
   </nq-input-number>
