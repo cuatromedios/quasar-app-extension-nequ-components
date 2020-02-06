@@ -26,7 +26,7 @@
       pattern: {
         type: String,
         required: false,
-        default: '0,0.00'
+        default: '0,0'
       },
       before: {
         type: String,
