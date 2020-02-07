@@ -10,7 +10,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/cuatromedios/quasar-app-extension-nequ-components"
+    "url": "https://github.com/cuatromedios/quasar-app-extension-nequ-components.git"
   },
   "bugs": "https://github.com/cuatromedios/quasar-app-extension-nequ-components/issues",
   "homepage": "http://nequ.github.io/",

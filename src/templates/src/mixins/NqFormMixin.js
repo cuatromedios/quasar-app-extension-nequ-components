@@ -22,7 +22,7 @@ export const NqFormMixin = {
       this.loading = true
       setTimeout(() => {
         this.loading = false
-      }, 2000)
+      }, 1000)
     },
     async onSubmit () {
       this.submitting = true

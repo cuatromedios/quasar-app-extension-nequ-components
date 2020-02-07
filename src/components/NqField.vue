@@ -3,6 +3,7 @@
            v-on="$listeners"
            v-on:focus="onFocus"
            v-on:blur="onBlur"
+           lazy-rules
            :outlined="!filled && !standout && !borderless"
            class="nq-field nq-component"
            >

@@ -1,13 +1,14 @@
 <template>
   <q-form v-bind="$attrs"
           v-on="$listeners"
-          :disabled="!ready || saving"
+          greedy
+          :disabled="!ready || submitting"
   >
     <div v-if="ready" class="row q-col-gutter-lg">
       <slot name="default"></slot>
       <div class="flex flex-center col-12">
         <q-btn v-if="cancelLabel !== ''" :label="cancelLabel" size="md" color="primary" flat class="q-mr-lg" @click="onCancel" />
-        <q-btn :label="submitLabel" size="lg" push type="submit" color="primary" :loading="saving"/>
+        <q-btn :label="submitLabel" size="lg" push type="submit" color="primary" :loading="submitting"/>
       </div>
     </div>
     <div v-if="!ready" class="row col-12">
@@ -35,7 +36,7 @@
         type: Boolean,
         default: true
       },
-      saving: {
+      submitting: {
         type: Boolean,
         default: false
       },
