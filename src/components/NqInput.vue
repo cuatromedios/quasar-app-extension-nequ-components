@@ -4,6 +4,7 @@
            v-on:focus="onFocus"
            v-on:blur="onBlur"
            lazy-rules
+           :required="false"
            :outlined="!filled && !standout && !borderless"
            class="nq-input nq-component"
            :input-class="`${$attrs['input-class'] || ''} nq-input-field`"
