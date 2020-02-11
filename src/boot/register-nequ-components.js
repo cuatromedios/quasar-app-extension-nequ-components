@@ -7,6 +7,8 @@ import NqInputPercentage from '../components/NqInputPercentage.vue'
 import NqSelect from '../components/NqSelect'
 import NqForm from '../components/NqForm'
 import NqTable from '../components/NqTable'
+import NqLayout from '../components/NqLayout'
+import NqPage from '../components/NqPage'
 
 // we globally register our component
 Vue.component('nq-field', NqField)
@@ -17,3 +19,5 @@ Vue.component('nq-input-percentage', NqInputPercentage)
 Vue.component('nq-select', NqSelect)
 Vue.component('nq-form', NqForm)
 Vue.component('nq-table', NqTable)
+Vue.component('nq-layout', NqLayout)
+Vue.component('nq-page', NqPage)
