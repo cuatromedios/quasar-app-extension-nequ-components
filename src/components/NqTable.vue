@@ -10,6 +10,7 @@
       <q-td :props="props">
         <div class="nq-row-actions">
           <q-btn v-for="action in actions"
+                 :key="`${action.icon}-${action.tooltip}-${action.label}-${action.color}`"
                  size="sm"
                  :round="!action.label"
                  :label="action.label"
