@@ -11,7 +11,8 @@
         <div class="nq-row-actions">
           <q-btn v-for="action in actions"
                  size="sm"
-                 round
+                 :round="!action.label"
+                 :label="action.label"
                  class="q-mx-sm"
                  :color="action.color ? action.color : 'primary'"
                  @click="action.method(props.row)"
