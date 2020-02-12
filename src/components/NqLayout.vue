@@ -13,7 +13,7 @@
                      :is="tab.children ? 'QBtnDropdown' : 'QRouteTab'"
                      :to="tab.children ? null : tab.route">
           <q-list>
-            <q-item v-for="child in tab.children" clickable :to="child.route">
+            <q-item v-for="child in tab.children" :key="child.route" clickable :to="child.route">
               <q-item-section>{{ child.title }}</q-item-section>
             </q-item>
           </q-list>
