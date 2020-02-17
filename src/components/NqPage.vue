@@ -7,11 +7,23 @@
     'max-width-xl': maxWidth === 'xl'
   }">
     <h1>{{ title }}</h1>
-    <div class="row">
-      <aside class="col-3" v-if="$slots.aside" >
+    <div class="row q-col-gutter-lg">
+      <aside :class="{
+      'col-1': asideCols === 1,
+      'col-2': asideCols === 2,
+      'col-3': asideCols === 3,
+      'col-4': asideCols === 4,
+      'col-5': asideCols === 5,
+      'col-6': asideCols === 6,
+      'col-7': asideCols === 7,
+      'col-8': asideCols === 8,
+      'col-9': asideCols === 9,
+      'col-10': asideCols === 10,
+      'col-11': asideCols === 11,
+      }" v-if="$slots.aside" >
         <slot name="aside"></slot>
       </aside>
-      <div :class="{ 'col-9': $slots.aside}">
+      <div class="col">
         <slot></slot>
       </div>
     </div>
@@ -29,6 +41,10 @@
       maxWidth: {
         type: String,
         default: 'md'
+      },
+      asideCols: {
+        type: Number,
+        default: 3
       }
     },
     data () {
