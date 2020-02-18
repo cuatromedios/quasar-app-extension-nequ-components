@@ -4,9 +4,9 @@
       <slot name="title"></slot>
       <q-space />
       <q-tabs v-model="tab" shrink stretch inline-label>
-        <div v-for="tab in tabs"
+        <div v-for="(tab, index) in tabs"
                      :name="tab.route"
-                     :key="tab.route"
+                     :key="index"
                      :label="tab.title"
                      :icon="tab.icon"
                      flat
