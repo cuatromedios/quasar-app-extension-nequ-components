@@ -81,7 +81,7 @@
     data () {
       return {
         tab: 'tab_0',
-        drawer: true
+        drawer: false
       }
     }
   }
