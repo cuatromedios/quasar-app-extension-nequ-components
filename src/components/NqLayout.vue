@@ -5,15 +5,15 @@
       <q-space />
       <q-tabs v-model="tab" shrink stretch inline-label>
         <div v-for="(tab, index) in tabs"
-                     :name="tab.route"
+                     :name="`tab_${index}`"
                      :key="index"
                      :label="tab.title"
                      :icon="tab.icon"
                      flat
                      :is="tab.children ? 'QBtnDropdown' : 'QRouteTab'"
-                     :to="tab.children ? null : tab.route">
+                     :to="tab.children ? null : tab.to">
           <q-list>
-            <q-item v-for="child in tab.children" :key="child.route" clickable :to="child.route">
+            <q-item v-for="(child, index) in tab.children" :key="index" clickable :to="child.to">
               <q-item-section>{{ child.title }}</q-item-section>
             </q-item>
           </q-list>
