@@ -4,7 +4,7 @@
           greedy
           :disabled="!ready || submitting"
   >
-    <div v-if="ready" class="row q-col-gutter-lg">
+    <div v-if="ready" class="row q-col-gutter-sm">
       <slot name="default"></slot>
       <div class="flex flex-center col-12">
         <q-btn v-if="cancelLabel !== ''" :label="cancelLabel" size="md" color="primary" flat class="q-mr-lg" @click="onCancel" />
