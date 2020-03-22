@@ -7,5 +7,4 @@
 const rimraf = require('rimraf')
 module.exports = function (api) {
   rimraf.sync(api.resolve.src('mixins/NqFieldMixin.js'))
-  rimraf.sync(api.resolve.src('mixins/NqFormMixin.js'))
 }
