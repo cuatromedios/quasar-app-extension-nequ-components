@@ -3,7 +3,9 @@
     <q-toolbar :class="toolbarClass || 'bg-primary text-white'">
       <slot name="title"></slot>
       <q-space />
-      <q-tabs v-model="tab" shrink stretch inline-label>
+      <q-tabs v-model="tab"
+              :indicator-color="indicatorColor"
+              shrink stretch inline-label>
         <div v-for="(tab, index) in tabs"
                      :name="`tab_${index}`"
                      :key="index"
@@ -72,6 +74,10 @@
     name: 'NqLayout',
     props: {
       toolbarClass: String,
+      indicatorColor: {
+        type: String,
+        default: 'secondary'
+      },
       tabs: Array,
       menuIcon: {
         type: String,
