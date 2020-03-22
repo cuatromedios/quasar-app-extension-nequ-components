@@ -4,6 +4,7 @@
       <slot name="title"></slot>
       <q-space />
       <q-tabs v-model="tab"
+              class="nq-layout-tabs"
               :indicator-color="indicatorColor"
               shrink stretch inline-label>
         <div v-for="(tab, index) in tabs"
@@ -37,6 +38,7 @@
             side="right"
             behavior="mobile"
             bordered
+            class="nq-drawer"
             content-class="bg-grey-3"
     >
       <q-scroll-area class="fit">

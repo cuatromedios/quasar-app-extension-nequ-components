@@ -1,23 +1,38 @@
 $components-background: #000000;
+
 .nq-select.q-field--outlined .q-field__control,
 .nq-input.q-field--outlined .q-field__control,
 .nq-field.q-field--outlined .q-field__control {
   background-color: rgba(0,0,0,0.05);
 }
+
+.nq-table thead tr,
 .nq-form .q-card__actions {
   background-color: transparentize($primary, 0.9);
 }
+
 .nq-layout {
-  .q-tabs.q-tabs--scrollable {
-    visibility: hidden;
+  .nq-layout-tabs.q-tabs {
+    &.q-tabs--scrollable {
+      visibility: hidden;
+    }
+    &.q-tabs--scrollable ~ .menu-button {
+      display: block;
+    }
+    &.q-tabs--not-scrollable ~ .menu-button {
+      display: none;
+    }
+    .q-icon {
+      opacity: 0.33;
+    }
   }
-  .q-tabs.q-tabs--scrollable ~ .menu-button {
-    display: block;
-  }
-  .q-tabs.q-tabs--not-scrollable ~ .menu-button {
-    display: none;
+  .nq-drawer {
+    .q-icon {
+      opacity: 0.5;
+    }
   }
 }
+
 .nq-page {
   margin: 0 auto;
   &.max-width-xs {
@@ -36,6 +51,7 @@ $components-background: #000000;
     max-width: $breakpoint-xl-min;
   }
 }
+
 .nq-table tr {
   .nq-row-actions {
     visibility: hidden;
