@@ -12,6 +12,7 @@
           <q-btn v-for="action in actions"
                  :key="`${action.icon}-${action.tooltip}-${action.label}-${action.color}`"
                  size="sm"
+                 :flat="action.flat"
                  :round="!action.label"
                  :label="action.label"
                  class="q-mx-sm"
@@ -46,14 +47,18 @@
     },
     computed: {
       computedColumns () {
+        let columns = this.columns.map(col => {
+          if (!col.align) col.align = 'left'
+          return col
+        })
         if (this.actions) {
-          return this.columns.concat({
+          return columns.concat({
             name: 'actions',
             label: '',
             align: 'right'
           })
         } else {
-          return this.columns
+          return columns
         }
       }
     }
