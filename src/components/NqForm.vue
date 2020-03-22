@@ -2,6 +2,7 @@
   <q-form v-bind="$attrs"
           v-on="$listeners"
           greedy
+          class="nq-form nq-component"
           :disabled="!ready || submitting"
   >
     <q-card>
@@ -17,7 +18,7 @@
           </div>
       </q-card-section>
       <q-separator v-if="!noActions" />
-      <q-card-actions class="q-pa-md bg-grey-2" v-if="!noActions" >
+      <q-card-actions class="q-pa-md" v-if="!noActions" >
         <div class="flex flex-center col-12">
           <q-btn v-if="cancelLabel !== ''" :label="cancelLabel" size="md" color="primary" flat class="q-mr-lg" @click="onCancel" />
           <q-btn :label="submitLabel" size="lg" push type="submit" color="primary" :loading="submitting"/>

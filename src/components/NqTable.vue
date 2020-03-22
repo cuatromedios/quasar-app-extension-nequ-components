@@ -64,15 +64,3 @@
     }
   }
 </script>
-<style lang="scss">
-  .nq-table tr {
-    .nq-row-actions {
-      visibility: hidden;
-    }
-    &:hover {
-      .nq-row-actions {
-        visibility: visible !important;
-      }
-    }
-  }
-</style>

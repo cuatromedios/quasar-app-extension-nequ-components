@@ -52,23 +52,3 @@
     }
   }
 </script>
-<style lang="scss">
-  .nq-page {
-    margin: 0 auto;
-    &.max-width-xs {
-      max-width: $breakpoint-xs-min;
-    }
-    &.max-width-sm {
-      max-width: $breakpoint-sm-min;
-    }
-    &.max-width-md {
-      max-width: $breakpoint-md-min;
-    }
-    &.max-width-lg {
-      max-width: $breakpoint-lg-min;
-    }
-    &.max-width-xl {
-      max-width: $breakpoint-xl-min;
-    }
-  }
-</style>

@@ -86,17 +86,3 @@
     }
   }
 </script>
-
-<style lang="scss">
-  .nq-layout {
-    .q-tabs.q-tabs--scrollable {
-      visibility: hidden;
-    }
-    .q-tabs.q-tabs--scrollable ~ .menu-button {
-      display: block;
-    }
-    .q-tabs.q-tabs--not-scrollable ~ .menu-button {
-      display: none;
-    }
-  }
-</style>

@@ -1,0 +1,48 @@
+$components-background: #000000;
+.nq-select.q-field--outlined .q-field__control,
+.nq-input.q-field--outlined .q-field__control,
+.nq-field.q-field--outlined .q-field__control {
+  background-color: transparentize($primary, 0.99);
+}
+.nq-form .q-card__actions {
+  background-color: transparentize($primary, 0.9);
+}
+.nq-layout {
+  .q-tabs.q-tabs--scrollable {
+    visibility: hidden;
+  }
+  .q-tabs.q-tabs--scrollable ~ .menu-button {
+    display: block;
+  }
+  .q-tabs.q-tabs--not-scrollable ~ .menu-button {
+    display: none;
+  }
+}
+.nq-page {
+  margin: 0 auto;
+  &.max-width-xs {
+    max-width: $breakpoint-xs-min;
+  }
+  &.max-width-sm {
+    max-width: $breakpoint-sm-min;
+  }
+  &.max-width-md {
+    max-width: $breakpoint-md-min;
+  }
+  &.max-width-lg {
+    max-width: $breakpoint-lg-min;
+  }
+  &.max-width-xl {
+    max-width: $breakpoint-xl-min;
+  }
+}
+.nq-table tr {
+  .nq-row-actions {
+    visibility: hidden;
+  }
+  &:hover {
+    .nq-row-actions {
+      visibility: visible !important;
+    }
+  }
+}
