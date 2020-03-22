@@ -6,7 +6,7 @@
             v-on:blur="onBlur"
             v-bind="$attrs"
             class="nq-input-number"
-            :input-class="`${$attrs['input-class'] || ''} text-right`"
+            :input-class="`${$attrs['input-class'] || ''} text-${align}`"
             >
     <template v-for="(_, slot) of $scopedSlots" v-slot:[slot]="scope"><slot :name="slot" v-bind="scope"/></template>
   </nq-input>
@@ -32,6 +32,11 @@
         type: String,
         required: false,
         default: ''
+      },
+      align: {
+        type: String,
+        required: false,
+        default: 'right'
       }
     },
     data () {
