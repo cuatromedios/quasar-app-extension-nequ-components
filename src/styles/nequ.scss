@@ -2,7 +2,7 @@ $components-background: #000000;
 .nq-select.q-field--outlined .q-field__control,
 .nq-input.q-field--outlined .q-field__control,
 .nq-field.q-field--outlined .q-field__control {
-  background-color: transparentize($primary, 0.99);
+  background-color: rgba(0,0,0,0.05);
 }
 .nq-form .q-card__actions {
   background-color: transparentize($primary, 0.9);
