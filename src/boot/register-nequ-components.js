@@ -9,6 +9,7 @@ import NqForm from '../components/NqForm'
 import NqTable from '../components/NqTable'
 import NqLayout from '../components/NqLayout'
 import NqPage from '../components/NqPage'
+import NqDateTime from "../components/NqDateTime";
 
 // we globally register our component
 Vue.component('nq-field', NqField)
@@ -21,3 +22,4 @@ Vue.component('nq-form', NqForm)
 Vue.component('nq-table', NqTable)
 Vue.component('nq-layout', NqLayout)
 Vue.component('nq-page', NqPage)
+Vue.component('nq-date-time', NqDateTime)

@@ -1,6 +1,6 @@
 {
   "name": "quasar-app-extension-nequ-components",
-  "version": "0.5.6",
+  "version": "0.6.0",
   "description": "Quasar Extension for NeQu boilerplate",
   "author": "Ramses <ramses@cuatromedios.com>",
   "license": "MIT",
@@ -20,6 +20,7 @@
     "yarn": ">= 1.6.0"
   },
   "dependencies": {
+    "moment": "^2.24.0",
     "numeral": "^2.0.6",
     "rimraf": "^3.0.1"
   }
