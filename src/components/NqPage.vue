@@ -6,7 +6,9 @@
     'max-width-lg': maxWidth === 'lg',
     'max-width-xl': maxWidth === 'xl'
   }">
+      <slot name="before"></slot>
       <h1>{{ title }}</h1>
+      <slot name="between"></slot>
       <section class="row reverse q-col-gutter-lg">
         <article class="col">
           <slot></slot>
@@ -82,6 +84,7 @@
           <slot name="aside"></slot>
         </aside>
       </section>
+      <slot name="after"></slot>
   </main>
 </template>
 
