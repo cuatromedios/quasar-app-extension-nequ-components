@@ -4,7 +4,9 @@
             v-on:blur="onBlur"
             v-bind="$attrs"
             class="nq-date-time"
-            @click="$refs.qDateProxy.show()"
+            ref="nqInputElement"
+            @click="onFieldClick"
+            @clear="onClear"
             :input-class="`${$attrs['input-class'] || ''}`"
   >
     <template v-slot:prepend>
@@ -56,6 +58,10 @@
       noTime: {
         type: Boolean,
         default: false
+      },
+      nullText: {
+        type: String,
+        default: ''
       }
     },
     data () {
@@ -63,7 +69,8 @@
         dateFormatted: '',
         dateModel: null,
         dateValue: null,
-        internalMask: 'YYYY-MM-DDTHH:mm:ssZ'
+        internalMask: 'YYYY-MM-DDTHH:mm:ssZ',
+        clearing: false
       }
     },
     mounted() {
@@ -71,12 +78,28 @@
     },
     methods: {
       processDate (newValue, emit=false) {
-        this.dateValue = moment(newValue)
-        this.dateModel = this.dateValue.format(this.modelFormat)
-        this.dateFormatted = this.dateValue.format(this.displayFormat)
+        if (newValue !== null) {
+          this.dateValue = moment(newValue)
+          this.dateModel = this.dateValue.format(this.modelFormat)
+          this.dateFormatted = this.dateValue.format(this.displayFormat)
+        } else {
+          this.dateValue = null
+          this.dateModel = null
+          this.dateFormatted = this.nullText
+        }
         if (emit) {
           this.$emit('input', this.dateModel)
         }
+      },
+      onFieldClick (event) {
+        if (!this.clearing) this.$refs.qDateProxy.show()
+      },
+      onClear () {
+        this.clearing = true
+        this.$emit('input', null)
+        setTimeout(() => {
+          this.clearing = false
+        }, 100)
       }
     },
     computed: {
